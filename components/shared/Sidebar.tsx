@@ -12,11 +12,16 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-4">
-        <Link href="/" className="sidebar-logo">
-          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
-        </Link>
+
+       
         <nav className="sidebar-nav">
           <SignedIn>
+          <Link href="/" className="sidebar-logo">
+          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
+        </Link>
+
+
+        {/* part 2 */}
             <ul className="sidebar-nav_elements">
               {navLinks.slice(0,6).map((link) => {
                 const isActive = link.route === pathname;
@@ -40,6 +45,10 @@ const Sidebar = () => {
                   </li>
                 );
               })}
+
+
+
+              {/* part 3 */}
 
               </ul> 
                <ul className='sidebar-nav_elements'> 
@@ -72,11 +81,11 @@ const Sidebar = () => {
           </SignedIn>
              
               
-          <SignedOut>
+          {/* <SignedOut>
               <Button asChild className='button bg-purple-gradient bg-cover'>
                 <Link href="/sign-in">Login</Link>
               </Button>
-          </SignedOut>
+          </SignedOut> */}
         </nav>
       </div>
     </aside>
